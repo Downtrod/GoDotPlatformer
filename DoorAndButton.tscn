@@ -9,7 +9,7 @@
 extents = Vector2( 8, 1 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 7, 1 )
+extents = Vector2( 7, 2.42188 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 7, 24.5 )
@@ -84,7 +84,7 @@ tracks/2/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Button/Button/CollisionShape2D:disabled")
+tracks/3/path = NodePath("Door/Door/CollisionShape2D:disabled")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -136,13 +136,13 @@ tracks/2/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Button/Button/CollisionShape2D:disabled")
+tracks/3/path = NodePath("Door/Door/CollisionShape2D:disabled")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.9 ),
+"times": PoolRealArray( 0, 0.8 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -222,6 +222,18 @@ tracks/5/keys = {
 "update": 0,
 "values": [ true ]
 }
+tracks/6/type = "value"
+tracks/6/path = NodePath("Door/Door/CollisionShape2D:disabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
 
 [node name="DoorAndButton" type="Node2D"]
 script = ExtResource( 4 )
@@ -243,7 +255,7 @@ disabled = true
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -39, 27 )
+position = Vector2( -39, 26 )
 shape = SubResource( 2 )
 
 [node name="Door" type="Sprite" parent="."]
@@ -258,6 +270,7 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door/Door"]
 position = Vector2( 1, 0.5 )
 shape = SubResource( 3 )
+disabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/ButtonDown = SubResource( 4 )
