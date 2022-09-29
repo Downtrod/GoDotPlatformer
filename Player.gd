@@ -61,8 +61,11 @@ func _physics_process(delta):
 		player_state = state.IDLE
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		player_state = state.STARTJUMP
+		double_jump = true
 	elif velocity.x != 0:
 		player_state = state.RUNNING
+	
+	if is_on_floor():
 		double_jump = true
 	
 	if not is_on_floor():
@@ -72,7 +75,7 @@ func _physics_process(delta):
 			player_state = state.FALL
 		if Input.is_action_just_pressed("jump") and double_jump == true:
 			player_state = state.STARTJUMP
-			double_jump == false
+			double_jump = false
 	
 	handle_state(player_state)
 	update_animation(player_state)	

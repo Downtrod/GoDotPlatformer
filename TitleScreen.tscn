@@ -1,0 +1,16 @@
+[gd_scene format=2]
+
+[node name="TitleScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Menu" type="VBoxContainer" parent="."]
+anchor_right = 0.026
+anchor_bottom = 0.031
+margin_left = 120.0
+margin_top = 80.0
+margin_right = 1160.0
+margin_bottom = 640.0
+
+[node name="TextureRect" type="TextureRect" parent="Menu"]
+margin_right = 1073.0
