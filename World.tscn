@@ -755,14 +755,14 @@ position = Vector2( 297, 4227 )
 scale = Vector2( 2.23318, 2.41611 )
 texture = ExtResource( 15 )
 
+[node name="SavePoint" parent="." instance=ExtResource( 16 )]
+position = Vector2( 207, 134 )
+
+[node name="SavePoint2" parent="." instance=ExtResource( 16 )]
+position = Vector2( 308, 118 )
+
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 171, 96 )
-
-[node name="SavePoint" parent="Player" instance=ExtResource( 16 )]
-position = Vector2( 26, 38 )
-
-[node name="SavePoint2" parent="Player" instance=ExtResource( 16 )]
-position = Vector2( 127, 22 )
+position = Vector2( 181, 96 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
